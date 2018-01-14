@@ -1,6 +1,6 @@
 name:                foundations
 version:             0.1.0.0
-synopsis:            Chapter 01-01
+synopsis:            Chapter 01
 category:            Web
 build-type:          Simple
 cabal-version:       >=1.10
