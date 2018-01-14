@@ -1,0 +1,12 @@
+name:                foundations
+version:             0.1.0.0
+synopsis:            Chapter 01-01
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable 01-hello
+  main-is:             Hello.hs
+  build-depends:       base
+                     , miso
+  default-language:    Haskell2010
