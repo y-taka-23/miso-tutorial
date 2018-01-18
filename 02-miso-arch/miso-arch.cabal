@@ -16,3 +16,9 @@ executable 03-messages
   build-depends:       base
                      , miso
   default-language:    Haskell2010
+
+executable 05-msg-payload
+  main-is:             MsgPayload.hs
+  build-depends:       base
+                     , miso
+  default-language:    Haskell2010
