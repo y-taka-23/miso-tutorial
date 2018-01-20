@@ -1,6 +1,7 @@
 {-# LANGUAGE RecordWildCards #-}
 module Main where
 
+import qualified Data.Set    as S
 import           Miso
 import           Miso.String
 
@@ -15,8 +16,9 @@ updateModel NoOp    m = noEff m
 viewModel :: Model -> View Action
 viewModel m = div_ [] [ text . ms $ show m ]
 
-subscriptions :: [Sub Action Model]
-subscriptions = [ keyboardSub (const KeyDown) ]
+-- it reacts only to keyup
+keyDown :: S.Set Int -> Action
+keyDown keys = if S.null keys then KeyDown else NoOp
 
 main :: IO ()
 main = startApp App {..}
@@ -25,6 +27,6 @@ main = startApp App {..}
         model = 0
         update = updateModel
         view = viewModel
-        subs = subscriptions
+        subs = [ keyboardSub keyDown ]
         events = defaultEvents
         mountPoint = Nothing
