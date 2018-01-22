@@ -11,3 +11,10 @@ executable 01-subs
                      , containers
                      , miso
   default-language:    Haskell2010
+
+executable 02-commands
+  main-is:             Commands.hs
+  build-depends:       base
+                     , miso
+                     , random
+  default-language:    Haskell2010
