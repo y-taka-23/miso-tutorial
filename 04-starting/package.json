@@ -1,0 +1,12 @@
+{
+  "name": "04-starting",
+  "version": "1.0.0",
+  "description": "Chapter 04",
+  "main": "index.js",
+  "repository": "https://github.com/y-taka-23/miso-tutorial.git",
+  "author": "TAKAHASHI Yuto <ytaka23dev@gmail.com>",
+  "license": "BSD3",
+  "devDependencies": {
+    "json-server": "^0.12.1"
+  }
+}
