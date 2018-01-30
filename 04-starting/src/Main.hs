@@ -2,17 +2,11 @@
 module Main where
 
 import           Miso
-import           Miso.String
 
-type Model = String
-
-data Action = NoOp
-
-updateModel :: Action -> Model -> Effect Action Model
-updateModel NoOp m = noEff m
-
-viewModel :: Model -> View Action
-viewModel m = div_ [] [ text (ms m) ]
+import           Action
+import           Model
+import           Update
+import           View
 
 main :: IO ()
 main = startApp App {..}
