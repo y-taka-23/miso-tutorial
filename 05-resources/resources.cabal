@@ -1,12 +1,16 @@
-name:                starting
+name:                resources
 version:             0.1.0.0
-synopsis:            Chapter 04
+synopsis:            Chapter 05
 category:            Web
 build-type:          Simple
 cabal-version:       >=1.10
 
-executable starting
+executable resources
   main-is:             Main.hs
+  other-modules:       Action
+                     , Model
+                     , Update
+                     , View
   hs-source-dirs:      src
   build-depends:       base
                      , miso

@@ -1,7 +1,7 @@
 {
-  "name": "04-starting",
+  "name": "05-resources",
   "version": "1.0.0",
-  "description": "Chapter 04",
+  "description": "Chapter 05",
   "main": "index.js",
   "repository": "https://github.com/y-taka-23/miso-tutorial.git",
   "author": "TAKAHASHI Yuto <ytaka23dev@gmail.com>",
