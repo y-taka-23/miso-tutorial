@@ -7,6 +7,10 @@ cabal-version:       >=1.10
 
 executable starting
   main-is:             Main.hs
+  other-modules:       Action
+                       Model
+                       Update
+                       View
   hs-source-dirs:      src
   build-depends:       base
                      , miso
