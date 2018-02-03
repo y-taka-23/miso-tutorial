@@ -12,7 +12,7 @@ main :: IO ()
 main = startApp App {..}
     where
         initialAction = NoOp
-        model = "Hello"
+        model = initialModel
         update = updateModel
         view = viewModel
         subs = []
