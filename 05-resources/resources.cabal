@@ -9,6 +9,7 @@ executable resources
   main-is:             Main.hs
   other-modules:       Action
                      , Model
+                     , Player.List
                      , Update
                      , View
   hs-source-dirs:      src
