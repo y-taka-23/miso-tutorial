@@ -1,11 +1,11 @@
-name:                resources
+name:                fetching-resources
 version:             0.1.0.0
-synopsis:            Chapter 05
+synopsis:            Chapter 06
 category:            Web
 build-type:          Simple
 cabal-version:       >=1.10
 
-executable resources
+executable fetching-resources
   main-is:             Main.hs
   other-modules:       Action
                      , Model
