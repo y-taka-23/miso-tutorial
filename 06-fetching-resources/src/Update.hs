@@ -6,4 +6,6 @@ import           Action
 import           Model
 
 updateModel :: Action -> Model -> Effect Action Model
-updateModel NoOp m = noEff m
+updateModel FetchPlayers m    = noEff m
+updateModel (SetPlayers ps) m = noEff m
+updateModel NoOp m            = noEff m

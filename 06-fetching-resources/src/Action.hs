@@ -1,3 +1,8 @@
 module Action where
 
-data Action = NoOp
+import           Model
+
+data Action
+    = FetchPlayers
+    | SetPlayers [Player]
+    | NoOp
