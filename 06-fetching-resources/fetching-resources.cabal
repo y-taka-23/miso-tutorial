@@ -8,6 +8,7 @@ cabal-version:       >=1.10
 executable fetching-resources
   main-is:             Main.hs
   other-modules:       Action
+                     , Effect
                      , Model
                      , Player.List
                      , Update
