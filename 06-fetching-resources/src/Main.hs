@@ -11,7 +11,7 @@ import           View
 main :: IO ()
 main = startApp App {..}
     where
-        initialAction = NoOp
+        initialAction = FetchPlayers
         model = initialModel
         update = updateModel
         view = viewModel
