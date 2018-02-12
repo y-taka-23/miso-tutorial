@@ -4,5 +4,5 @@ import           Model
 
 data Action
     = FetchPlayers
-    | SetPlayers [Player]
+    | SetPlayers (Either String [Player])
     | NoOp

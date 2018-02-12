@@ -9,5 +9,5 @@ import           Model
 updateModel :: Action -> Model -> Effect Action Model
 updateModel FetchPlayers m = m <# do
     SetPlayers <$> fetchPlayers
-updateModel (SetPlayers ps) m = noEff m { players = Just ps }
-updateModel NoOp m            = noEff m
+updateModel (SetPlayers ePs) m = noEff m { players = ePs }
+updateModel NoOp m = noEff m

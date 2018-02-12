@@ -1,12 +1,12 @@
 module Model where
 
 data Model = Model
-    { players :: Maybe [Player]
+    { players :: Either String [Player]
     } deriving (Eq, Show)
 
 initialModel :: Model
 initialModel = Model
-    { players = Nothing
+    { players = Left "Loading..."
     }
 
 type PlayerId = String

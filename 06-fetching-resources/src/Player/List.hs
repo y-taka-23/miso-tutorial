@@ -7,10 +7,10 @@ import           Model
 import           Miso
 import           Miso.String (ms)
 
-viewPlayers :: Maybe [Player] -> View Action
-viewPlayers mPs = div_ []
+viewPlayers :: Either String [Player] -> View Action
+viewPlayers ePs = div_ []
     [ nav
-    , list mPs
+    , list ePs
     ]
 
 nav :: View action
@@ -18,9 +18,9 @@ nav = div_
     [ class_ "clearfix mb2 white bg-black"]
     [ div_ [ class_ "left p2" ] [ text "Players" ] ]
 
-list :: Maybe [Player] -> View action
-list Nothing = div_ [] [ text "Loading..." ]
-list (Just ps) = div_
+list :: Either String [Player] -> View action
+list (Left msg) = div_ [ class_ "p2" ] [ text $ ms msg ]
+list (Right ps) = div_
     [ class_ "p2" ]
     [ table_ []
         [ thead_ []

@@ -4,7 +4,7 @@ module Effect where
 import           Data.Aeson
 import           Model
 
-fetchPlayers :: IO [Player]
+fetchPlayers :: IO (Either String [Player])
 fetchPlayers = pure []
 
 instance FromJSON Player where
