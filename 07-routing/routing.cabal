@@ -1,11 +1,11 @@
-name:                fetching-resources
+name:                routing
 version:             0.1.0.0
-synopsis:            Chapter 06
+synopsis:            Chapter 07
 category:            Web
 build-type:          Simple
 cabal-version:       >=1.10
 
-executable fetching-resources
+executable routing
   main-is:             Main.hs
   other-modules:       Action
                      , Effect

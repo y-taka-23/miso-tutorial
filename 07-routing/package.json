@@ -1,7 +1,7 @@
 {
-  "name": "06-fetching-resources",
+  "name": "07-routing",
   "version": "1.0.0",
-  "description": "Chapter 06",
+  "description": "Chapter 07",
   "main": "index.js",
   "repository": "https://github.com/y-taka-23/miso-tutorial.git",
   "author": "TAKAHASHI Yuto <ytaka23dev@gmail.com>",
