@@ -36,6 +36,13 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
     inline: true,
+    port: 3000,
+    proxy: {
+      '/': {
+       target: 'http://localhost:3000',
+       pathRewrite: {'^/.*': ''}
+      }
+    },
     stats: { colors: true }
   }
 };

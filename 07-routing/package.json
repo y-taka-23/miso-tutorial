@@ -9,7 +9,7 @@
   "scripts": {
     "api": "node api.js",
     "build": "webpack",
-    "client": "webpack-dev-server --port 3000",
+    "client": "webpack-dev-server",
     "start": "nf start"
   },
   "devDependencies": {
