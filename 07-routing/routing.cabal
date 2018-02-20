@@ -18,4 +18,5 @@ executable routing
                      , base
                      , ghcjs-base
                      , miso
+                     , network-uri
   default-language:    Haskell2010

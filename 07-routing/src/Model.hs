@@ -1,12 +1,16 @@
 module Model where
 
+import           Network.URI
+
 data Model = Model
-    { players :: Either String [Player]
+    { players    :: Either String [Player]
+    , currentURI :: URI
     } deriving (Eq, Show)
 
-initialModel :: Model
-initialModel = Model
+initialModel :: URI -> Model
+initialModel uri = Model
     { players = Left "Loading..."
+    , currentURI = uri
     }
 
 type PlayerId = String

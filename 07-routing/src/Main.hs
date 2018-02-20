@@ -9,10 +9,11 @@ import           Update
 import           View
 
 main :: IO ()
-main = startApp App {..}
+main = do
+    uri <- getCurrentURI
+    startApp App { model = initialModel uri, .. }
     where
         initialAction = FetchPlayers
-        model = initialModel
         update = updateModel
         view = viewModel
         subs = []
