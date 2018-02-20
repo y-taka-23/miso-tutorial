@@ -1,11 +1,11 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Player.List where
 
-import           Action
-import           Model
-
 import           Miso
 import           Miso.String (ms)
+
+import           Action
+import           Model
 
 viewPlayers :: Either String [Player] -> View Action
 viewPlayers ePs = div_ []
