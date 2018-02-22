@@ -16,6 +16,6 @@ main = do
         initialAction = FetchPlayers
         update = updateModel
         view = viewModel
-        subs = []
+        subs = [ uriSub HandleURI ]
         events = defaultEvents
         mountPoint = Nothing

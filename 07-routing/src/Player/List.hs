@@ -6,6 +6,7 @@ import           Miso.String (ms)
 
 import           Action
 import           Model
+import           Routing
 
 viewPlayers :: Either String [Player] -> View Action
 viewPlayers ePs = div_ []
@@ -18,7 +19,7 @@ nav = div_
     [ class_ "clearfix mb2 white bg-black"]
     [ div_ [ class_ "left p2" ] [ text "Players" ] ]
 
-list :: Either String [Player] -> View action
+list :: Either String [Player] -> View Action
 list (Left msg) = div_ [ class_ "p2" ] [ text $ ms msg ]
 list (Right ps) = div_
     [ class_ "p2" ]
@@ -35,10 +36,19 @@ list (Right ps) = div_
         ]
     ]
 
-playerRow :: Player -> View action
+playerRow :: Player -> View Action
 playerRow p = tr_ []
     [ th_ [] [ text . ms $ ident p]
     , th_ [] [ text . ms $ name p]
     , th_ [] [ text . ms . show $ level p]
-    , th_ [] []
+    , th_ [] [ editBtn p ]
+    ]
+
+editBtn :: Player -> View Action
+editBtn p = a_
+    [ class_ "btn regular"
+    , onClick (goEdit $ ident p)
+    ]
+    [ i_ [ class_ "fa fa-pencil mr1" ] []
+    , text "Edit"
     ]

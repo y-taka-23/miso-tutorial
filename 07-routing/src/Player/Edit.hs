@@ -6,6 +6,7 @@ import           Miso.String (ms)
 
 import           Action
 import           Model
+import           Routing
 
 viewPlayer :: Player -> View Action
 viewPlayer p = div_ []
@@ -16,7 +17,16 @@ viewPlayer p = div_ []
 nav :: View Action
 nav = div_
     [ class_ "clearfix mb2 white bg-black p1" ]
-    []
+    [ listBtn ]
+
+listBtn :: View Action
+listBtn = a_
+    [ class_ "btn regular"
+    , onClick goList
+    ]
+    [ i_ [ class_ "fa fa-chevron-left mr1" ] []
+    , text "List"
+    ]
 
 form :: Player -> View Action
 form p = div_
