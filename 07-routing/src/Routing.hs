@@ -21,6 +21,7 @@ type ListRoute = "players" :> View Action
 
 type EditRoute = "players" :> Capture "ident" PlayerId :> View Action
 
+-- Todo: this action jumps to '/players/players'...
 goList :: Action
 goList =
     ChangeURI $ safeLink (Proxy :: Proxy Route) (Proxy :: Proxy ListRoute)
