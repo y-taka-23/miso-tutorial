@@ -1,0 +1,25 @@
+name:                routing
+version:             0.1.0.0
+synopsis:            Chapter 07
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable routing
+  main-is:             Main.hs
+  other-modules:       Action
+                     , Effect
+                     , Model
+                     , Player.Edit
+                     , Player.List
+                     , Routing
+                     , Update
+                     , View
+  hs-source-dirs:      src
+  build-depends:       aeson
+                     , base
+                     , ghcjs-base
+                     , miso
+                     , network-uri
+                     , servant
+  default-language:    Haskell2010
