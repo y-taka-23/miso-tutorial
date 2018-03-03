@@ -1,11 +1,11 @@
-name:                routing
+name:                edit
 version:             0.1.0.0
-synopsis:            Chapter 07
+synopsis:            Chapter 08
 category:            Web
 build-type:          Simple
 cabal-version:       >=1.10
 
-executable routing
+executable edit
   main-is:             Main.hs
   other-modules:       Action
                      , Effect

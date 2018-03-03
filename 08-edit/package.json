@@ -1,0 +1,29 @@
+{
+  "name": "08-edit",
+  "version": "1.0.0",
+  "description": "Chapter 08",
+  "main": "index.js",
+  "repository": "https://github.com/y-taka-23/miso-tutorial.git",
+  "author": "TAKAHASHI Yuto <ytaka23dev@gmail.com>",
+  "license": "BSD3",
+  "scripts": {
+    "api": "node api.js",
+    "build": "webpack",
+    "client": "webpack-dev-server",
+    "start": "nf start"
+  },
+  "devDependencies": {
+    "ace-css": "^1.1.0",
+    "css-loader": "^0.28.9",
+    "file-loader": "^1.1.6",
+    "font-awesome": "^4.7.0",
+    "foreman": "^2.0.0",
+    "ghcjs-require": "file:../../ghcjs-commonjs/ghcjs-require",
+    "ghcjs-loader": "file:../../ghcjs-commonjs/ghcjs-loader",
+    "json-server": "^0.12.1",
+    "style-loader": "^0.20.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}
