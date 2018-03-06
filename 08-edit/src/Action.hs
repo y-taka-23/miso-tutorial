@@ -9,4 +9,5 @@ data Action
     | SetPlayers (Either String [Player])
     | HandleURI URI
     | ChangeURI URI
+    | ChangeLevel Player Int
     | NoOp
