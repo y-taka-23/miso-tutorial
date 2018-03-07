@@ -49,10 +49,14 @@ formLevel p = div_
 
 btnLevelDecrease :: Player -> View Action
 btnLevelDecrease p = a_
-    [ class_ "btn ml1 h1", onClick (ChangeLevel p (-1)) ]
+    [ class_ "btn ml1 h1", onClick (SavePlayer newP) ]
     [ i_ [ class_ "fa fa-minus-circle" ] [] ]
+        where
+            newP = p { level = level p - 1 }
 
 btnLevelIncrease :: Player -> View Action
 btnLevelIncrease p = a_
-    [ class_ "btn ml1 h1" , onClick (ChangeLevel p 1) ]
+    [ class_ "btn ml1 h1" , onClick (SavePlayer newP) ]
     [ i_ [ class_ "fa fa-plus-circle" ] [] ]
+        where
+            newP = p { level = level p + 1 }

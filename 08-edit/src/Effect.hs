@@ -2,6 +2,7 @@
 module Effect where
 
 import           Data.Aeson
+import qualified Data.JSString as J
 import           JavaScript.Web.XMLHttpRequest
 import           Model
 
@@ -17,6 +18,22 @@ fetchPlayers = do
             , reqHeaders = []
             , reqWithCredentials = False
             , reqData = NoData
+            }
+
+savePlayer :: Player-> IO (Either String Player)
+savePlayer p = do
+    -- Todo: handle server-side errors here
+    _ <- xhrByteString req
+    return $ Right p
+    where
+        req = Request
+            { reqMethod = PUT
+            , reqURI = J.pack $ "http://localhost:4000/players/" ++ ident p
+            , reqLogin = Nothing
+            , reqHeaders = [("Content-type", "application/json")]
+            , reqWithCredentials = False
+            -- Todo: better handling of JSON data
+            , reqData = StringData $ J.pack $ show $ encode p
             }
 
 instance FromJSON Player where
