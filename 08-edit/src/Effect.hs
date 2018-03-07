@@ -1,9 +1,12 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Effect where
 
+import qualified Codec.Binary.UTF8.String      as U
 import           Data.Aeson
-import qualified Data.JSString as J
+import qualified Data.ByteString.Lazy          as B
+import qualified Data.JSString                 as J
 import           JavaScript.Web.XMLHttpRequest
+
 import           Model
 
 fetchPlayers :: IO (Either String [Player])
@@ -33,7 +36,7 @@ savePlayer p = do
             , reqHeaders = [("Content-type", "application/json")]
             , reqWithCredentials = False
             -- Todo: better handling of JSON data
-            , reqData = StringData $ J.pack $ show $ encode p
+            , reqData = StringData . J.pack . U.decode . B.unpack . encode $ p
             }
 
 instance FromJSON Player where

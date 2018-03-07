@@ -18,8 +18,10 @@ executable edit
   hs-source-dirs:      src
   build-depends:       aeson
                      , base
+                     , bytestring
                      , ghcjs-base
                      , miso
                      , network-uri
                      , servant
+                     , utf8-string
   default-language:    Haskell2010
