@@ -20,7 +20,7 @@ page :: Model -> View Action
 page m = view
     where
         view = either (const notFoundPage) id result
-        result = runRoute (Proxy :: Proxy Route) handlers m
+        result = runRoute (Proxy :: Proxy Route) handlers currentURI m
         handlers = topPage :<|> listPage :<|> editPage
 
 topPage :: Model -> View Action
@@ -32,7 +32,7 @@ listPage m = viewPlayers $ players m
 editPage :: PlayerId -> Model -> View Action
 editPage query m = case players m of
     Right ps -> case find (\p -> ident p == query) ps of
-        Just p -> viewPlayer p
+        Just p  -> viewPlayer p
         Nothing -> notFoundPage
     Left err ->  errorPage err
 
