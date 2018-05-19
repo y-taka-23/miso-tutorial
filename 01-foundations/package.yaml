@@ -1,0 +1,11 @@
+name:           foundations
+version:        '0.1.0.0'
+synopsis:       Chapter 01
+category:       Web
+
+executables:
+  01-hello:
+    main:           Hello.hs
+    dependencies:
+    - base
+    - miso

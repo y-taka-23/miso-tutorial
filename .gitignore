@@ -25,3 +25,4 @@ node_modules/
 *.js_o
 *.jsexe
 *.log
+**/*.cabal
